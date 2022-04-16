@@ -192,7 +192,34 @@ filterForm.addEventListener("submit", function (evt) {
     const searchValue = elements.search.value;
     const fromValue = elements.from.value;
     const toValue = elements.to.value;
+    const sortbyValue = elements.sortby.value
+
     showingProducts = products
+        .sort(function (a, b) {
+            switch (sortbyValue) {
+                case "1":
+                    if (a.title > b.title) {
+                        return 1
+                    } else if (a.title < b.title) {
+                        return -1
+                    } else {
+                        return 0
+                    }
+                    case "2":
+                        return b.price - a.price;
+                    case "3":
+                        return a.price - b.price;
+
+                    case "4":
+                        return a.birthDate - b.birthDate;
+                    case "5":
+                        return b.birthDate - a.birthDate;
+                    default:
+                        break;
+
+            }
+
+        })
         .filter(function (filtiringProduct) {
             const filtredItem = filtiringProduct.price
             return filtredItem >= fromValue;
