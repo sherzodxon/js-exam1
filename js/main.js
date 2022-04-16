@@ -99,6 +99,7 @@ addForm.addEventListener("submit", function (evt) {
         features: featuresValue
     }
     products.push(newProduct);
+    localStorage.setItem("products", JSON.stringify(products));
     showingProducts.push(newProduct)
     firstShowParrots(newProduct);
     addForm.reset();
@@ -173,8 +174,9 @@ editForm.addEventListener("submit", function (evt) {
     const editingProductIndex = showingProducts.findIndex(function (findedIndex) {
         return findedIndex.id == editingId;
     })
-    products.splice(editingProductIndex, 1, editProducts)
-    showingProducts.splice(editingProductIndex, 1, editProducts)
+    products.splice(editingProductIndex, 1, editProducts);
+    showingProducts.splice(editingProductIndex, 1, editProducts);
+    localStorage.setItem("products", JSON.stringify(products));
     remainingProducts(products);
     editParrotModal.hide();
 

@@ -1,4 +1,4 @@
-const products = [
+const products = localStorage.getItem("products") ? JSON.parse(localStorage.getItem("products")) :[
   {
     id: 1,
     title: "Gapiruvchi kakatu",
