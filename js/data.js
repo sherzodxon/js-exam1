@@ -1,7 +1,7 @@
 const products = [
   {
     id: 1,
-    title: "Hyacinth macaw",
+    title: "Gapiruvchi kakatu",
     img: "https://media.istockphoto.com/photos/parrot-hyacinth-macaw-picture-id1359443019?b=1&k=20&m=1359443019&s=170667a&w=0&h=dteRZ9bM7sEvBbFE9it1r9O7IxlILXb1UnSoLNEVMAg=",
     price: 5000,
     birthDate: "2022-01-12",
@@ -23,7 +23,7 @@ const products = [
       height: 100
     },
     isFavorite: false,
-    features: ""
+    features: "red"
   },
   {
     id: 3,
@@ -36,7 +36,7 @@ const products = [
       height: 84
     },
     isFavorite: false,
-    features: ""
+    features: "yellow"
   }
 ]
 
