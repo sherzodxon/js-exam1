@@ -121,7 +121,7 @@ const editFeatures = editForm.querySelector("#edit-features");
 list.addEventListener("click", function (evt) {
     if (evt.target.matches(".del")) {
         const clickedDelId = +evt.target.dataset.delete;
-
+         console.log(clickedDelId);
         const clickedDelIndex = products.findIndex(function (findingIndex) {
             return findingIndex.id == clickedDelId;
         })
